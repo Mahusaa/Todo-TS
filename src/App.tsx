@@ -1,9 +1,10 @@
 
 import './App.css';
+import Todos from './components/Todos';
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <Todos items={["Learn react", "Learn typescript"]}/>
   )
 }
 
