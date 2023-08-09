@@ -10,10 +10,13 @@ function App() {
     const newTodo = new Todo(todo);
     setTodos((prevTodos) => [...prevTodos, newTodo])
   };
+  const handleRemoveTodo = (id: string) => {
+    setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id))
+  };
   return (
     <>
       <TodosForm onAddTodo={handleSubmission} />
-      <Todos items={todos} />
+      <Todos items={todos} onRemoveTodo={handleRemoveTodo}/>
     </>
   )
 }

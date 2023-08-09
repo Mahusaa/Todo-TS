@@ -1,9 +1,9 @@
 import React from "react"
 import classes from "./TodosItem.module.css"
 
-const TodosItem: React.FC<{text: string}> = ({text}) => {
+const TodosItem: React.FC<{text: string, onRemoveTodo: () => void}> = ({text, onRemoveTodo}) => {
   return (
-    <li className={classes.item}>{text}</li>
+    <li className={classes.item} onClick={onRemoveTodo}>{text}</li>
   )
 }
 
