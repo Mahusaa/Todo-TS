@@ -11,5 +11,4 @@ const Todos: React.FC<{items: Todo[]}> = ({items}) => {
         </ul>
     )
 }
-
 export default Todos

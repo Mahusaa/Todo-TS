@@ -1,4 +1,4 @@
-
+import React from "react"
 
 const TodosItem: React.FC<{text: string}> = ({text}) => {
   return (
