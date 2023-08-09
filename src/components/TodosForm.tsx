@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import classes from "./TodosForm.module.css"
 
 const TodosForm: React.FC<{onAddTodo: (todo: string) => void}> = ({onAddTodo}) => {
     const myInputRef = useRef<HTMLInputElement>(null)
@@ -12,7 +13,7 @@ const TodosForm: React.FC<{onAddTodo: (todo: string) => void}> = ({onAddTodo}) =
         myInputRef.current!.value = "";
     }
     return(
-        <form onSubmit={handleSubmit}>
+        <form className={classes.form} onSubmit={handleSubmit}>
             <label htmlFor="input">Todo Input</label>
             <input type="text" id="input" ref={myInputRef}></input>
             <button type="submit">Add todo</button>

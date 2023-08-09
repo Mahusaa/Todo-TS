@@ -1,8 +1,9 @@
 import React from "react"
+import classes from "./TodosItem.module.css"
 
 const TodosItem: React.FC<{text: string}> = ({text}) => {
   return (
-    <li>{text}</li>
+    <li className={classes.item}>{text}</li>
   )
 }
 
